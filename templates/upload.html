@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Your Resume | Skill Scanner</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8faff;
+      color: #333;
+    }
+
+    header {
+      background: #0d47a1;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo span {
+      color: #ffc107;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    .upload-section {
+      padding: 60px 50px;
+      background: linear-gradient(to right, #e3f2fd, #fff);
+      text-align: center;
+    }
+
+    .upload-section h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #0d47a1;
+    }
+
+    .upload-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .upload-form {
+      background: #fff;
+      padding: 40px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .upload-form input[type="file"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border: 2px dashed #0d47a1;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .upload-form button {
+      background: #0d47a1;
+      color: white;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .upload-form button:hover {
+      background: #1565c0;
+    }
+
+    .instructions {
+      padding: 50px 50px 80px;
+    }
+
+    .section-heading {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #0d47a1;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0d47a1;
+    }
+
+    .card p {
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0d47a1;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Skill<span>Scanner</span></div>
+   <nav>
+      <h3>Extract Your skills within a Minute.</h3>
+    </nav>
+  </header>
+
+  <!-- Upload Section -->
+  <section class="upload-section" data-aos="fade-up">
+    <h1>Upload Your Resume</h1>
+    <p>Supported formats: PDF, DOCX, TXT | Max size: 5 MB</p>
+
+    <form class="upload-form" enctype="multipart/form-data" method="POST" action="/upload" data-aos="zoom-in">
+      <label for="resume">Choose Your Resume File:</label>
+      <input type="file" name="resume" id="resume" accept=".pdf,.docx,.txt" required>
+      <button type="submit">Upload & Extract Skills</button>
+    </form>
+  </section>
+
+  <!-- Instructions -->
+  <section class="instructions">
+    <h2 class="section-heading" data-aos="fade-up">How It Works</h2>
+    <div class="card-container">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Step 1</h3>
+        <p>Upload your resume in supported file formats (PDF, DOCX, or TXT).</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Step 2</h3>
+        <p>Our AI analyzes the document structure and content in real-time.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Step 3</h3>
+        <p>You'll instantly receive a list of extracted skills and summary insights.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Resume Skill Extractor | Made with ❤️ by You</p>
+  </footer>
+
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+
+</body>
+</html>
